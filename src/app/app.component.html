@@ -1,0 +1,7 @@
+<app-header></app-header>
+<div class="middle-container">
+    <ng-container *ngFor="let card of cards">
+        <app-profile-card [card]="card"></app-profile-card>
+    </ng-container>
+</div>
+
