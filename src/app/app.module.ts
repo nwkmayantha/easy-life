@@ -7,10 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HeaderComponent } from './header/header.component';
 import { ProfileCardComponent } from './profile-card/profile-card.component';
+import { SubMenuComponent } from './sub-menu/sub-menu.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, ProfileCardComponent, ],
+  declarations: [AppComponent, HeaderComponent, ProfileCardComponent, SubMenuComponent, ],
   imports: [
     BrowserModule,
     AppRoutingModule,
