@@ -82,11 +82,13 @@ nav {
   div.items {
     padding: 0 25px;
     display: inline-flex;
+    align-items: end;
   }
   a {
     text-decoration: none;
     font-size: 18px;
     padding: 0 12px;
+    
    
   }
   .search-icon {

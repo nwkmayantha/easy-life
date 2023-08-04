@@ -8,10 +8,11 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HeaderComponent } from './header/header.component';
 import { ProfileCardComponent } from './profile-card/profile-card.component';
 import { SubMenuComponent } from './sub-menu/sub-menu.component';
+import { WelcomeBannerComponent } from './welcome-banner/welcome-banner.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, ProfileCardComponent, SubMenuComponent, ],
+  declarations: [AppComponent, HeaderComponent, ProfileCardComponent, SubMenuComponent, WelcomeBannerComponent, ],
   imports: [
     BrowserModule,
     AppRoutingModule,
