@@ -1,0 +1,43 @@
+<!-- <div class="container-welcome"><app-welcome-banner></app-welcome-banner></div> -->
+<div class="middle-main-container">
+  <div class="middle-container">
+    <swiper-container class="csss"
+      navigation="true"
+      pagination="true"
+      pagination-clickable="true"
+      autoplay="true"
+      slides-per-view="4"
+      speed="500"
+   
+      css-mode="true"
+    >
+      <ng-container *ngFor="let card of cards">
+        <swiper-slide>
+          <app-profile-card [card]="card"></app-profile-card>
+        </swiper-slide>
+      </ng-container>
+    </swiper-container>
+  </div>
+
+  <h1 class="bottom-main">Book Your Services Now !</h1>
+
+  <div class="bottom-main-container">
+    <swiper-container class="csss"
+      navigation="true"
+      pagination="true"
+      pagination-clickable="true"
+      autoplay="true"
+      slides-per-view="4"
+      speed="500"
+     
+      css-mode="true"
+    >
+      <ng-container *ngFor="let card of cards">
+        <swiper-slide>
+          <app-profile-card [card]="card"></app-profile-card>
+        </swiper-slide>
+      </ng-container>
+    </swiper-container>
+    <h1 class="bottom-main">Most popular Services in this Week !</h1>
+  </div>
+</div>

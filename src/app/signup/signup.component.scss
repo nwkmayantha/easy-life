@@ -1,0 +1,17 @@
+.icon {
+  background-color: #2d2674;
+  color: white;
+}
+.form-check-input[type=checkbox]:checked {
+
+  background-color: hsl(245, 51%, 30%);
+
+}
+
+.form-check-input:focus {
+  border-color: #dfdeec;
+}
+
+.form-check-input {
+  margin-left: -220px; /* Adjust the margin as needed */
+}

@@ -1,21 +1,11 @@
-<div class="container-fluid">
-<app-header></app-header>
-<app-sub-menu></app-sub-menu>
-<!-- <app-welcome-banner></app-welcome-banner> -->
-<div class="middle-main-container">
-  <div class="middle-container">
-    <ng-container *ngFor="let card of cards">
-      <app-profile-card [card]="card"></app-profile-card>
-    </ng-container>
+<div class="container">
+
+
+  <div *ngIf="!isOnLandingPage()">
+    <app-header></app-header>
+    <app-sub-menu></app-sub-menu>
   </div>
-  <h1 class="bottom-main">Book Your Services Now !</h1>
+
+  <router-outlet></router-outlet>
 </div>
-<div class="bottom-main-container">
-  <div class="bottom-container">
-    <ng-container *ngFor="let card of cards">
-      <app-profile-card [card]="card"></app-profile-card>
-    </ng-container>
-  </div>
-  <h1 class="bottom-main">Most popular Services in this Week !</h1>
-</div>
-</div>
+

@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatButtonModule } from '@angular/material/button';
+import { NavigationEnd, ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class AppComponent {
   title = 'easy-life';
+  public url: string | undefined;
 
   cards = [
     { id: 1, name: 'Kasun', title: 'Cleaner' },
@@ -18,4 +17,15 @@ export class AppComponent {
     { id: 4, name: 'Kavinda', title: 'Cleaner' },
     { id: 5, name: 'Sripala', title: 'Cleaner' },
   ];
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.url = event.url;
+      }
+    });
+  }
+
+  isOnLandingPage(): boolean {
+    return this.url == '/landingpage' || this.url == '/' ||  this.url=='/#!';
+  }
 }

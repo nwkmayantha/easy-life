@@ -1,8 +1,10 @@
+// Header
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
-*{
+* {
   justify-content: center;
   align-items: center;
 }
+
 
 .logo {
   font-size: 35px; /* Add custom styles to logo EASYLife */
@@ -11,11 +13,9 @@
 }
 
 .nav-item {
-  padding: 10px; /* Add space between nav-bar menu items */
+  margin: 10px; /* Add space between nav-bar menu items */
 }
-.navbar{
-  height: 90px;
-}
+
 .dropdown-menu {
   position: absolute;
   max-height: 300px;
@@ -30,10 +30,30 @@
 }
 
 .btn {
-  color: aliceblue; /* Font and search icon color */
-  border-color: #31b6c8; /* Button border */
+  background-color: #2d2674; /* Font and search icon color */
+  color: aliceblue;
 }
 
 .btn.btn-outline-success:hover {
   background-color: #31b6c8; /* Hover  */
 }
+
+// Content after Header
+
+.custom-width {
+  width: 450px;
+}
+
+.verticle-line {
+  width: 1px;
+  height: 450px;
+  background-color: #2d2674;
+  margin-right: 50px;
+}
+
+.SearchHeader {
+  color: #2d2674;
+  padding-bottom: 10px;
+  margin-left: -72px;
+}
+

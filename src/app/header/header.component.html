@@ -1,54 +1,69 @@
-<nav>
-  <ul>
-    <li class="logo">EAZYLife</li>
-
-
-    <li class="search-icon">
-      <input type="search" placeholder="Search" />
-      <label class="icon"><span class="fas fa-search"></span></label>
-    </li>
-    
-    <div class="items">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </div>
-  </ul>
-</nav>
-<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-dark" style="background-color: #2d2674">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">EAZZYLife</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+    <div class="navbar-header">
+      <a class="navbar-brand logo" routerLink="/home">EAZYLife.</a>
+    </div>
+
+    <form class="d-flex input-group w-auto">
+      <input
+        type="search"
+        class="form-control form-inline mr-sm-2"
+        style="width: 550px"
+        placeholder="What services are you looking for today ?"
+        aria-label="Search"
+        aria-describedby="search-addon"
+      />
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        <i class="fas fa-search"></i> Search
+      </button>
+    </form>
+
+    <div class="headerMenu">
+      <ul class="navbar-nav flex-row" style="margin-right: 10px">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"
+            ><i class="fa-regular fa-bell" style="font-size: 24px"></i
+          ></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="#"
+            ><i class="fa-regular fa-envelope" style="font-size: 24px"></i
+          ></a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+        <li class="nav-item active">
+          <a class="nav-link" href="#"
+            ><i class="fa-solid fa-list" style="font-size: 24px"></i
+          ></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/landingpage">Orders</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Switch to Selling</a>
+        </li>
+        <li class="nav-item dropdown" *ngIf="!isLogin()">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <i class="fa-regular fa-circle" style="font-size: 40px"></i>
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Profile</a>
+            <a class="dropdown-item" href="#">Dashboard</a>
+            <a class="dropdown-item" href="#">Post Request</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Setting</a>
+            <a class="dropdown-item" href="#">Help</a>
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
     </div>
   </div>
-</nav> -->
+</nav>
