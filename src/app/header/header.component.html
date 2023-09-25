@@ -1,41 +1,69 @@
-<nav>
-  <ul>
-    <li class="logo">EAZYLife</li>
-    <li class="search-icon">
-      <input type="search" placeholder="Search" />
-      <label class="icon"><span class="fas fa-search"></span></label>
-    </li>
-    <div class="items">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
+<nav class="navbar navbar-dark" style="background-color: #2d2674">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand logo" routerLink="/home">EAZYLife.</a>
     </div>
-  </ul>
-</nav>
 
-<!-- Profile card start-->
-<!-- <div class="card">
-  <div class="card-image">
-    <img src="easy-life\asset\123.jpg" alt="" />
+    <form class="d-flex input-group w-auto">
+      <input
+        type="search"
+        class="form-control form-inline mr-sm-2"
+        style="width: 550px"
+        placeholder="What services are you looking for today ?"
+        aria-label="Search"
+        aria-describedby="search-addon"
+      />
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        <i class="fas fa-search"></i> Search
+      </button>
+    </form>
+
+    <div class="headerMenu">
+      <ul class="navbar-nav flex-row" style="margin-right: 10px">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"
+            ><i class="fa-regular fa-bell" style="font-size: 24px"></i
+          ></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#"
+            ><i class="fa-regular fa-envelope" style="font-size: 24px"></i
+          ></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#"
+            ><i class="fa-solid fa-list" style="font-size: 24px"></i
+          ></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/landingpage">Orders</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Switch to Selling</a>
+        </li>
+        <li class="nav-item dropdown" *ngIf="!isLogin()">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <i class="fa-regular fa-circle" style="font-size: 40px"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Profile</a>
+            <a class="dropdown-item" href="#">Dashboard</a>
+            <a class="dropdown-item" href="#">Post Request</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Setting</a>
+            <a class="dropdown-item" href="#">Help</a>
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
-  <div class="profile-image">
-    <img src="easy-life\asset\2.png" alt="" />
-  </div>
-  <div class="card-content">
-    <h3>Andrea Joe</h3>
-    <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s.
-    </p>
-  </div>
-  <div class="icons">
-    <a href="#" class="fab fa-facebook-f"></a>
-    <a href="#" class="fab fa-youtube"></a>
-    <a href="#" class="fab fa-instagram"></a>
-    <a href="#" class="fab fa-twitter"></a>
-    <a href="#" class="fab fa-whatsapp"></a>
-  </div>
-</div> -->
-<!--Profile card end -->
+</nav>
